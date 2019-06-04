@@ -7,6 +7,10 @@
     "default": "gulp default",
     "clean": "gulp clean"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert-laws/practice-june-2019-javascript-learn.git"
+  },
   "keywords": [
     "javascript"
   ],
