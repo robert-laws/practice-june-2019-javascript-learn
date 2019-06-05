@@ -1,0 +1,15 @@
+extends layouts/default.pug
+
+block content
+  div(class="container")
+    div(class="row mt-4")
+      div(class="col")
+        div
+          h3 Some Repositories
+          a(href="#" onclick="getRepositories()") Get Repositories
+        div(id="repositories")
+        
+        
+        div(class="mt-4")
+          h4 Commits
+          div(id="commits")
