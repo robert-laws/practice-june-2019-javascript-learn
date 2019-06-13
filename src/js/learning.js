@@ -18,7 +18,7 @@ function doExpression(func) {
   return func;
 }
 
-console.log(doExpression(myFunction()));
+// console.log(doExpression(myFunction()));
 
 const myFunc = {
   addEight: function(number) {
@@ -27,11 +27,11 @@ const myFunc = {
   myNumber: 40
 }
 
-console.log(myFunc.myNumber);
+// console.log(myFunc.myNumber);
 
 myFunc.myNumber = 100;
 
-console.log(myFunc.addEight(10));
+// console.log(myFunc.addEight(10));
 
 const meeting = function(firstPerson) {
   return function(secondPerson) {
@@ -41,24 +41,24 @@ const meeting = function(firstPerson) {
 
 const doMeeting = meeting("Bob Cobb");
 
-console.log(doMeeting("Visitor"));
+// console.log(doMeeting("Visitor"));
 
 const names = ["Bob", "Mel", "Jim", "Kal", "Vin"];
 const numbers = [2, 4, 6, 8];
 
-names.forEach(function(value, index) {
-  console.log(`${index} - ${value}`);
-})
+// names.forEach(function(value, index) {
+//   console.log(`${index} - ${value}`);
+// })
 
-console.log(names.sort())
+// console.log(names.sort())
 
-console.log(names.reduce(function(total, value) {
-  return total + ", " + value
-}, "hello"))
+// console.log(names.reduce(function(total, value) {
+//   return total + ", " + value
+// }, "hello"))
 
-console.log(numbers.reduce(function(total, value) {
-  return total + value
-}, 1))
+// console.log(numbers.reduce(function(total, value) {
+//   return total + value
+// }, 1))
 
 // Classes
 
@@ -115,4 +115,4 @@ const myData = [
 
 let d = new Data(myData);
 
-console.log(d.getData());
+// console.log(d.getData());
