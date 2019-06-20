@@ -93,7 +93,15 @@ gulp.task('browser', function() {
   // Reload when html changes
   gulp.watch(paths.images.src, gulp.parallel('images'))
     .on('change', browserSync.reload);
-})
+});
+
+gulp.task('build', gulp.series('clean',
+  gulp.parallel(
+    'pug',
+    'styles',
+    'scripts',
+    'images'
+  )));
 
 gulp.task('serve', gulp.series('clean',
   gulp.parallel(

@@ -1,0 +1,104 @@
+extends layouts/default.pug
+
+block content
+  div(class="container")
+
+    h1 Basic Styles
+
+    p Bootstrap overrides browser styles - using 
+      strong 
+        a(href="https://getbootstrap.com/docs/4.0/content/reboot/" class="text-reset align-text-bottom font-italic text-decoration-none") reboot
+      |  to reset browser defaults
+
+    hr
+
+    h2 Basic typography
+
+    p Display styles -> 'display-1' - 'display-4'
+    
+    p Lead paragraph 'lead' -> gives more emphasis to the lead paragraph
+
+    p Example of 'display-3'
+
+    div(class="display-3") Hello!
+
+    hr
+
+    h2 Text Utilities
+
+    p Horizontal Alignment -> 'text-(xx)-position' ex. 'text-lg-center', 'text-md-left', 'text-sm-right' (best for aligning to icons)
+
+    p(class="text-lg-center text-md-left text-sm-right") text-(XX)-center -> Utility to manage alignment per screen width (centered on large).
+
+    p Line-Height Alignment -> 'align-baseline', 'align-top', 'align-middle', 'align-bottom', 'align-text-bottom', 'align-text-top', 'align-right'
+
+    p Capitalization -> 'text-typ' ex. 'text-lowercase', 'text-uppercase', 'text-capitalize', 'text-monospace' 
+      span(class="text-uppercase font-weight-bold") example text to uppercase 
+      | demo how it works.
+
+    p Text Styles -> 'font-STYL', ex. 'font-italic', 'font-weight-normal', 'font-weight-light', 'font-weight-lighter', 'font-weight-bold', 'font-weight-bolder'
+
+    p Text Modifiers -> 'text-decoration-none', 'text-reset'
+
+    p Flow -> 'text-FLOW', ex. 'text-wrap', 'text-nowrap', 'text-break', 'text-truncate' (used to control longish text)
+
+    h2 Blockquote and Lists
+
+    p Lists -> ul class='list-unstyled' - no bullets on list, inline list -> ul class='list-inline' -> li class='list-inline-item'
+
+    h6 Ex. Unstyled List
+
+    ul(class="list-unstyled")
+      li Item One
+      li Item Two
+      li Item Three
+      li Item Four
+      li Item Five
+
+    h6 Ex. Inline  List
+
+    ul(class="list-inline")
+      li(class="list-inline-item") Item One
+      li(class="list-inline-item") Item Two
+      li(class="list-inline-item") Item Three
+      li(class="list-inline-item") Item Four
+      li(class="list-inline-item") Item Five
+
+    p Blockquote -> blockquote class='blockquote'
+
+    section(class="content")
+      blockquote(class="blockquote") 
+        p Another default that is set in this version of Bootstrap is box sizing, which makes it easier to calculate the width of elements. And by default it's turned to border-box, which means that when you specify the width of an element, say a div being 200 pixels wide, it takes into account the built-in padding.
+        footer(class="blockquote-footer") Bob Cobb from 
+          cite My New Book
+
+      p Blockquote - align right
+
+      blockquote(class="blockquote text-right") 
+        p Another default that is set in this version of Bootstrap is box sizing, which makes it easier to calculate the width of elements. And by default it's turned to border-box, which means that when you specify the width of an element, say a div being 200 pixels wide, it takes into account the built-in padding.
+        footer(class="blockquote-footer") Bob Cobb from 
+          cite My New Book
+      
+    h2 Colors
+
+    p Text Color -> 'text-COLOR', ex. 'text-primary', 'text-success', 'text-danger'
+
+    p Background Color -> 'bg-COLOR', ex. 'bg-primary', 'bg-success', 'bg-danger'
+
+    p(class="text-primary") Colors examples
+    p(class="text-info") Colors examples
+    p(class="bg-dark text-white") Colors examples
+    p(class="bg-info text-white") Colors examples
+    p(class="bg-light text-dark") Colors examples
+
+    h2 Images
+
+    p Responsive -> 'img-fluid'
+    
+    p Rounded Corners -> 'img-thumbnail'
+
+    img(src="/images/character.png" class="img-fluid img-thumbnail")
+
+    p Control corner roundness -> Side, Shape, Size, ex. 'rounded-top, rounded-circle, rounded-lg'
+
+    img(src="/images/character.png" class="rounded-top")
