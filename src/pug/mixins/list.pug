@@ -1,0 +1,9 @@
+mixin list(page, items)
+  div(class="list-group")
+    each val, index in items
+      //- - var url = item.split("|")[1]
+      //- - var text = item.split("|")[0]
+      if page == index
+        a(href=val class="list-group-item list-group-item-action active")= index
+      else
+        a(href=val class="list-group-item list-group-item-action")= index
