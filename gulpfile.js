@@ -19,7 +19,7 @@ var paths = {
     dest: "build"
   },
   scripts: {
-    src: ["node_modules/bootstrap/dist/js/bootstrap.js","node_modules/popper.js/dist/popper.js", "node_modules/jquery/dist/jquery.js", "src/js/**/*.js"],
+    src: ["node_modules/moment/moment.js", "node_modules/bootstrap/dist/js/bootstrap.js", "node_modules/jquery/dist/jquery.js", "src/js/**/*.js"],
     dest: "build/scripts"
   },
   images: {
@@ -39,9 +39,6 @@ gulp.task('clean', function() {
 gulp.task('scripts', function() {
   var stream = gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
-    .pipe(babel({
-        presets: ['@babel/env']
-    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scripts.dest));
   return stream;
