@@ -84,11 +84,16 @@ for (action of personActions) {
 // Destructing Arrays
 
 let [first, , , last] = ['Boston', 'Chicago', 'Houston', 'Los Angeles'];
-let {title, price} = {
+
+let lunch = {
   title: 'Ham Sandwich',
   price: 10,
   description: 'Tasty lunch meal',
   ingredients: ['bread', 'ham', 'mustard']
 }
 
-console.log(title)
+function getLunch({title, price}) {
+  return `Enjoy a ${title} for the price of $${price}.`;
+}
+
+console.log(getLunch(lunch));
