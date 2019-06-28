@@ -2,6 +2,7 @@
 
 import { myProjectId as id, myProjectName, showProject } from './my-modules.js';
 import { default as myItemName } from './items.js';
+import { Person } from './person.js';
 
 console.log(`project id: ${id} - project name: ${myProjectName}`);
 console.log(myItemName);
@@ -41,4 +42,14 @@ let greeting = ({firstName = 'unknown', lastName = 'unknown'}) => {
 }
 
 document.querySelector("#myGreeting").innerHTML = greeting(person2);
+let personDiv = document.querySelector("#myPerson");
 
+let hal = new Person('human', 'hal', 'hope', 34);
+let jim = new Person('human', 'jim', 'jupe', 23);
+let mel = new Person('human', 'mel', 'mope', 38);
+
+personDiv.innerHTML = `<p>${hal.getName()}, ${hal.identifySpecies()}.</p>`;
+personDiv.innerHTML += `<p>${jim.getName()}, ${jim.identifySpecies()}.</p>`;
+personDiv.innerHTML += `<p>${mel.getName()}, ${mel.identifySpecies()}.</p>`;
+
+document.querySelector("#personCount").innerHTML = `${Person.count}`;
