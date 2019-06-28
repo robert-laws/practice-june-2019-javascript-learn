@@ -1,5 +1,11 @@
 // practice area
 
+import { myProjectId as id, myProjectName, showProject } from './my-modules.js';
+import { default as myItemName } from './items.js';
+
+console.log(`project id: ${id} - project name: ${myProjectName}`);
+console.log(myItemName);
+showProject();
 // template literals
 
 let cardTemplate = (title, image) => {
@@ -35,3 +41,4 @@ let greeting = ({firstName = 'unknown', lastName = 'unknown'}) => {
 }
 
 document.querySelector("#myGreeting").innerHTML = greeting(person2);
+
